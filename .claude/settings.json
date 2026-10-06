@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(progress/**)",
+      "Write(progress/**)",
+      "Edit(behavioral/**)",
+      "Write(behavioral/**)",
+      "Edit(career/**)",
+      "Write(career/**)",
+      "Edit(README.md)",
+      "Read(//home/qnu/Documents/personal/projects/FAANG-*/**)",
+      "Bash(date:*)",
+      "Bash(tools/status_all.sh:*)",
+      "Bash(python3 tools/forecast.py:*)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          { "type": "command", "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/session-start.sh" }
+        ]
+      }
+    ]
+  }
+}
